@@ -1,0 +1,209 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3dfeb;
+    padding: 15px 20px;
+}
+
+.header-logo img {
+    height: 50px;
+}
+
+.header-cart-loop {
+    display: flex;
+    gap: 15px;
+}
+
+.header-cart-loop img {
+    height: 30px;
+    cursor: pointer;
+}
+
+.header-cart-loop a{
+    text-decoration: none;
+}
+
+.cart-count {
+    background: red;
+    color: white;
+    padding: 2px 4px; 
+    border-radius: 100%;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Selected Category Section */
+.selected-category-section {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+/* Category Buttons */
+.optional-categories-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.optional-categories-section button {
+    background: #77929a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.optional-categories-section button:hover {
+    background: #586c72;
+}
+
+/* Welcoming Section */
+.welcoming-section {
+    background-image: url('../images/welcome.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 30vh;
+    width: 100%;
+
+    /* for the content of the section*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcoming-section h3{
+    font-size: 3em;
+    color: white;
+    text-shadow: 
+        -2px -2px 0 black,  
+         2px -2px 0 black,  
+        -2px  2px 0 black,  
+         2px  2px 0 black;
+}
+
+/* Category Images Section */
+
+.category-images {  /* # because id in html and not class*/
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 20px;
+}
+
+.product {
+    /*for text*/
+    font-weight: bold;
+    text-align: center;
+
+    /*for the whole box*/
+    border: 2px solid black;
+    position: relative; /*of the elements like the cart or the text*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.product-image {
+    width: 100%;    /* so it stays inside its container*/
+}
+
+.cart-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+}
+
+.product:hover .cart-icon {
+    opacity: 1; /* not hiden when we are on*/
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 15px;
+    background: #b3dfeb;
+    color: black;
+    font-weight: bold
+}
+
+.contact-section a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    .category-images {  /* # because id in html and not class*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 5% 15%;
+    }
+}
+
+
+/*----------------------for cart.html------------------------*/
+.cart-items-section {
+    text-align: center;
+}
+
+.cart-items-label{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 0% 20%;
+}
+
+.cart-items {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    padding: 2% 20%;
+}
+
+.item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.amount-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    gap:10px;
+}
+
+.amount-wrapper button:hover{
+    cursor: pointer;
+}
+
